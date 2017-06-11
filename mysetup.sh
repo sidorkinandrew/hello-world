@@ -48,9 +48,21 @@ echo "alias gbl='pm2 l'" >> ~/.bashrc
 echo "alias gblog='pm2 logs'" >> ~/.bashrc
 echo "alias gbstart='pm2 start'" >> ~/.bashrc
 echo "alias gbstop='pm2 stop'" >> ~/.bashrc
+echo "alias editpairs='mcedit /opt/gunbot/cfg/currencies.txt'" >> ~/.bashrc
 mkdir /root/.pm2 -p
 chmod g+rwx /root/.pm2
 chmod g+rw /root/.pm2/*
+# editing currencies
+printText "Configuring "$GB_FDRNAME
+echo 'SELECTED_EDITOR="/usr/bin/mcedit"'>~/.selected_editor
+echo "# Enter pairs you want to start here"
+echo "# without BTC_, just names "
+echo "# only uppercase, please "
+echo "# separate each coinname using enter "
+echo "# when ready hit enter "
+mcedit /opt/gunbot/cfg/currencies.txt
+
+#basic ssh protection 
 
 # display message and pause 
 pause(){
@@ -86,3 +98,4 @@ do
 		*) Pause "Select between 1 to 5 only"
 	esac
 done
+
