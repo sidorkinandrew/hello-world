@@ -23,7 +23,7 @@ printText "Installing nodejs 7"
 curl -qsL https://deb.nodesource.com/setup_7.x | bash - > /dev/null 2>&1
 apt-get -y -qq install nodejs > /dev/null 2>&1
 printText "Installing tools"
-apt-get -y -qq unzip install wget mc htop > /dev/null 2>&1
+apt-get -y -qq unzip install wget mc htop gawk > /dev/null 2>&1
 npm install -g pm2 gunbot-monitor > /dev/null 2>&1
 printText "Installing "$GB_FDRNAME
 wget -q https://github.com/GuntharDeNiro/BTCT/releases/download/${GB_FDRNAME}/${GB_FLNAME}.zip -P /opt/
