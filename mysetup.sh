@@ -20,7 +20,7 @@ echo "BTC_$str pair is selected"
 printText "Setup of "$GB_FDRNAME
 printText "Updating the system"
 apt-get -qq update > /dev/null 2>&1
-apt-get -y -qq install curl  > /dev/null 2>&1
+apt-get -y -qq install unzip > /dev/null 2>&1
 printText "Installing nodejs 7"
 curl -qsL https://deb.nodesource.com/setup_7.x | bash - > /dev/null 2>&1
 apt-get -y -qq install nodejs > /dev/null 2>&1
