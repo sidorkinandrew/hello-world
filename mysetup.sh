@@ -14,30 +14,29 @@ printText () {
 }
 r() {
 read -p "Input pair name without BTC_ in UPPERCASE: " str
-echo "$str" | tr "[:lower:]" "[:upper:]" >> $PAIRS_FLN_NAME
+echo '"$str" | tr "[:lower:]" "[:upper:]"' >> $PAIRS_FLN_NAME
 echo "BTC_$str pair is selected"
 }
 printText "Setup of "$GB_FDRNAME
 printText "Updating the system"
 apt-get -qq update > /dev/null 2>&1
-apt-get -y -qq install unzip > /dev/null 2>&1
 printText "Installing nodejs 7"
 curl -qsL https://deb.nodesource.com/setup_7.x | bash - > /dev/null 2>&1
 apt-get -y -qq install nodejs > /dev/null 2>&1
 printText "Installing tools"
-apt-get -y -qq unzip install wget mc htop gawk > /dev/null 2>&1
+apt-get -y -qq install unzip wget mc htop gawk > /dev/null 2>&1
 npm install -g pm2 gunbot-monitor > /dev/null 2>&1
 printText "Installing "$GB_FDRNAME
-wget -q https://github.com/GuntharDeNiro/BTCT/releases/download/${GB_FDRNAME}/${GB_FLNAME}.zip -P /opt/
-unzip -o -qq /opt/${GB_FLNNAME}.zip -d /opt/gb-unzip-temp
-mkdir /opt/${GB_FLNAME} -p
-mkdir /opt/${GB_FLNAME}/cfg -p
-cp /opt/gb-unzip-temp/gunthy-* /opt/${GB_FLNAME}
-cp /opt/gb-unzip-temp/ALLPAIRS-params.js /opt/${GB_FLNAME}
-cp /opt/gb-unzip-temp/*.js /opt/${GB_FLNAME}
+wget -q https://github.com/GuntharDeNiro/BTCT/releases/download/$GB_FDRNAME/$GB_FLNAME.zip -P /opt/
+unzip -o -qq /opt/$GB_FDRNAME.zip -d /opt/gb-unzip-temp
+mkdir /opt/$GB_FLNAME -p
+mkdir /opt/$GB_FLNAME/cfg -p
+cp /opt/gb-unzip-temp/gunthy-* /opt/$GB_FLNAME
+cp /opt/gb-unzip-temp/ALLPAIRS-params.js /opt/$GB_FDRNAME
+cp /opt/gb-unzip-temp/*.js /opt/$GB_FDRNAME
 rm /opt/gunbot > /dev/null 2>&1
-ln -s /opt/${GB_FLNAME} /opt/gunbot
-rm /opt/${GB_FLNAME}.zip
+ln -s /opt/$GB_FLNAME /opt/gunbot
+rm /opt/$GB_FLNAME.zip
 rm -R /opt/gb-unzip-temp
 chmod +x /opt/gunbot/gunthy-*
 printText "Setting up GUNBOT's folder"
