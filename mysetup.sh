@@ -1,4 +1,6 @@
 #!/bin/bash
+# run with 
+# curl -sL https://raw.githubusercontent.com/dyvosvit/hello-world/master/mysetup.sh | bash -
 trap '' SIGINT
 trap ''  SIGQUIT
 trap '' SIGTSTP
