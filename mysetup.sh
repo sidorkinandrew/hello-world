@@ -55,47 +55,46 @@ chmod g+rw /root/.pm2/*
 # editing currencies
 printText "Configuring "$GB_FDRNAME
 echo 'SELECTED_EDITOR="/usr/bin/mcedit"'>~/.selected_editor
-echo "# Enter pairs you want to start here"
-echo "# without BTC_, just names "
-echo "# only uppercase, please "
-echo "# separate each coinname using enter "
-echo "# when ready hit enter "
-mcedit /opt/gunbot/cfg/currencies.txt
+#echo "# Enter pairs you want to start here"
+#echo "# without BTC_, just names "
+#echo "# only uppercase, please "
+#echo "# separate each coinname using enter "
+#echo "# when ready hit enter "
+#mcedit /opt/gunbot/cfg/currencies.txt
 
 #basic ssh protection 
 
 # display message and pause 
-pause(){
-	local m="$@"
-	echo "$m"
-	read -p "Press [Enter] key to continue..." key
-}
+#pause(){#
+#	local m="$@"
+#	echo "$m"
+#	read -p "Press [Enter] key to continue..." key
+#}#
  
 # set an 
-while :
-do
+#while :
+#do
 	# show menu
-	clear
-	echo "---------------------------------"
-	echo "	     M A I N - M E N U"
-	echo "---------------------------------"
-	echo "1. Show current date/time"
-	echo "2. Show what users are doing"
-	echo "3. Show top memory & cpu eating process"
-	echo "4. Show network stats"
-	echo "5. Exit"
-	echo "---------------------------------"
-	read -r -p "Enter your choice [1-5] : " c
+#	clear
+#	echo "---------------------------------"
+#	echo "	     M A I N - M E N U"
+#	echo "---------------------------------"
+#	echo "1. Show current date/time"
+#	echo "2. Show what users are doing"
+#	echo "3. Show top memory & cpu eating process"
+#	echo "4. Show network stats"
+#	echo "5. Exit"
+#	echo "---------------------------------"
+#	read -r -p "Enter your choice [1-5] : " c
 	# take action
-	case $c in
-		1) pause "$(date)";;
-		2) w| less;;
-		3) echo '*** Top 10 Memory eating process:'; ps -auxf | sort -nr -k 4 | head -10; 
-		   echo; echo '*** Top 10 CPU eating process:';ps -auxf | sort -nr -k 3 | head -10; 
-		   echo;  pause;;
-		4) netstat -s | less;;
-		5) break;;
-		*) Pause "Select between 1 to 5 only"
-	esac
-done
-
+#	case $c in
+#		1) pause "$(date)";;
+#		2) w| less;;
+#		3) echo '*** Top 10 Memory eating process:'; ps -auxf | sort -nr -k 4 | head -10; 
+#		   echo; echo '*** Top 10 CPU eating process:';ps -auxf | sort -nr -k 3 | head -10; 
+#		   echo;  pause;;
+#		4) netstat -s | less;;
+#		5) break;;
+#		*) Pause "Select between 1 to 5 only"
+#	esac
+#d#one
