@@ -16,8 +16,8 @@ sudo unzip $GB_FLNAME.zip -d $TMPLDR
 sudo mkdir /opt/$GB_FLNAME
 sudo mkdir /opt/$GB_FLNAME/cfg
 sudo cp $TMPLDR/gunthy-linuxx64 /opt/$GB_FLNAME
-sudo cp $TMPLDR/ALLPAIRS-params.js /opt/$GB_FDRNAME
-sudo cp $TMPLDR/*.js /opt/$GB_FDRNAME
+sudo cp $TMPLDR/ALLPAIRS-params.js /opt/$GB_FLNAME
+sudo cp $TMPLDR/*.js /opt/$GB_FLNAME
 #sudo rm /opt/gunbot
 sudo ln -s /opt/$GB_FLNAME /opt/gunbot
 #sudo rm /opt/$GB_FLNAME.zip
