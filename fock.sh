@@ -19,8 +19,8 @@ sudo cp /opt/gb-unzip-temp/ALLPAIRS-params.js /opt/$GB_FDRNAME
 sudo cp /opt/gb-unzip-temp/*.js /opt/$GB_FDRNAME
 sudo rm /opt/gunbot
 sudo ln -s /opt/$GB_FLNAME /opt/gunbot
-sudo rm /opt/$GB_FLNAME.zip
-sudo rm -R /opt/gb-unzip-temp
+#sudo rm /opt/$GB_FLNAME.zip
+#sudo rm -R /opt/gb-unzip-temp
 sudo chmod +x /opt/gunbot/gunthy-*
 sudo echo "" > $MYPAIRS
 sudo echo "" >> ~/.bashrc
