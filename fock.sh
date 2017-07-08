@@ -12,14 +12,13 @@ GB_FLNAME="GUNBOT_v3.3.2_Poloniex_Bittrex_Patch"
 MYPAIRS="currencies.txt"
 cd /opt/
 sudo wget https://github.com/GuntharDeNiro/BTCT/releases/download/$GB_FDRNAME/$GB_FLNAME.zip
-sudo unzip $GB_FLNAME.zip -d $TMPLDR
+sudo unzip $GB_FLNAME.zip -d $GB_FLNAME
 sudo rm /opt/gunbot
 sudo ln -s /opt/$GB_FLNAME /opt/gunbot
 sudo mkdir /opt/gunbot/cfg
-sudo cp $TMPLDR/gunthy-linuxx64 /opt/gunbot
-sudo cp $TMPLDR/ALLPAIRS-params.js /opt/gunbot
-sudo cp $TMPLDR/*.js /opt/gunbot
-sudo ln -s /opt/$GB_FLNAME /opt/gunbot
+sudo rm /opt/gunbot/*.exe
+sudo rm /opt/gunbot/gunthy-macos
+sudo rm /opt/gunbot/gunthy-linuxx86
 #sudo rm /opt/$GB_FLNAME.zip
 #sudo rm -R $TMPLDR
 sudo chmod +x /opt/gunbot/gunthy-linuxx64
