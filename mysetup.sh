@@ -49,9 +49,13 @@ sudo echo "alias gblog='pm2 logs'" >> ~/.bashrc
 sudo echo "alias gbstart='pm2 start'" >> ~/.bashrc
 sudo echo "alias gbstop='pm2 stop'" >> ~/.bashrc
 sudo echo "alias editpairs='mcedit /opt/gunbot/cfg/currencies.txt'" >> ~/.bashrc
+sudo echo "alias api='mcedit /opt/gunbot/ALLPAIRS-params.js'" >> ~/.bashrc
 sudo mkdir /root/.pm2 -p
 sudo chmod g+rwx /root/.pm2
 sudo chmod g+rw /root/.pm2/*
-# editing currencies
 sudo echo 'SELECTED_EDITOR="/usr/bin/mcedit"'>~/.selected_editor
 curl https://raw.githubusercontent.com/dyvosvit/hello-world/master/mypairs > /opt/gunbot/cfg/$MYPAIRS
+#scripts
+#change ssh port
+#proxy download
+#and install
