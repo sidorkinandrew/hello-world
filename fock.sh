@@ -13,17 +13,17 @@ MYPAIRS="currencies.txt"
 cd /opt/
 sudo wget https://github.com/GuntharDeNiro/BTCT/releases/download/$GB_FDRNAME/$GB_FLNAME.zip
 sudo unzip $GB_FLNAME.zip -d $TMPLDR
-sudo mkdir /opt/$GB_FLNAME
-sudo mkdir /opt/$GB_FLNAME/cfg
-sudo cp $TMPLDR/gunthy-linuxx64 /opt/$GB_FLNAME
-sudo cp $TMPLDR/ALLPAIRS-params.js /opt/$GB_FLNAME
-sudo cp $TMPLDR/*.js /opt/$GB_FLNAME
-#sudo rm /opt/gunbot
+sudo rm /opt/gunbot
+sudo ln -s /opt/$GB_FLNAME /opt/gunbot
+sudo mkdir /opt/gunbot/cfg
+sudo cp $TMPLDR/gunthy-linuxx64 /opt/gunbot
+sudo cp $TMPLDR/ALLPAIRS-params.js /opt/gunbot
+sudo cp $TMPLDR/*.js /opt/gunbot
 sudo ln -s /opt/$GB_FLNAME /opt/gunbot
 #sudo rm /opt/$GB_FLNAME.zip
 #sudo rm -R $TMPLDR
 sudo chmod +x /opt/gunbot/gunthy-linuxx64
-sudo echo "" > $MYPAIRS
+sudo echo "" > /opt/gunbot/cfg/$MYPAIRS
 sudo echo "" >> ~/.bashrc
 sudo echo "# GUNBOT's ALIASES" >> ~/.bashrc
 sudo echo "alias gbdir='cd /opt/gunbot'" >> ~/.bashrc
