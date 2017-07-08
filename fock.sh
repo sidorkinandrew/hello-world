@@ -8,12 +8,12 @@ trap ''  SIGQUIT
 trap '' SIGTSTP
 GB_FDRNAME="Gunbot3.3.2"
 GB_FLNAME="GUNBOT_v3.3.2_Poloniex_Bittrex_Patch"
-PAIRS_FLN_NAME ="currencies.txt"
+MYPAIRS="currencies.txt"
 cd /opt/
 sudo wget https://github.com/GuntharDeNiro/BTCT/releases/download/$GB_FDRNAME/$GB_FLNAME.zip
-sudo unzip $GB_FLNAME.zip -d /opt/gb-unzip-temp
-sudo mkdir /opt/$GB_FLNAME -p
-sudo mkdir /opt/$GB_FLNAME/cfg -p
+sudo unzip $GB_FLNAME.zip
+sudo mkdir /opt/$GB_FLNAME
+sudo mkdir /opt/$GB_FLNAME/cfg
 sudo cp /opt/gb-unzip-temp/gunthy-* /opt/$GB_FLNAME
 sudo cp /opt/gb-unzip-temp/ALLPAIRS-params.js /opt/$GB_FDRNAME
 sudo cp /opt/gb-unzip-temp/*.js /opt/$GB_FDRNAME
@@ -22,7 +22,7 @@ sudo ln -s /opt/$GB_FLNAME /opt/gunbot
 sudo rm /opt/$GB_FLNAME.zip
 sudo rm -R /opt/gb-unzip-temp
 sudo chmod +x /opt/gunbot/gunthy-*
-sudo echo "" > $PAIRS_FLN_NAME
+sudo echo "" > $MYPAIRS
 sudo echo "" >> ~/.bashrc
 sudo echo "# GUNBOT's ALIASES" >> ~/.bashrc
 sudo echo "alias gbdir='cd /opt/gunbot'" >> ~/.bashrc
@@ -36,5 +36,4 @@ sudo mkdir /root/.pm2 -p
 sudo chmod g+rwx /root/.pm2
 sudo chmod g+rw /root/.pm2/*
 # editing currencies
-sudo printText "Configuring "$GB_FDRNAME
 sudo echo 'SELECTED_EDITOR="/usr/bin/mcedit"'>~/.selected_editor
