@@ -1,4 +1,5 @@
 #!/bin/bash
+# apt-get install curl -y
 # run with 
 # curl -sL https://raw.githubusercontent.com/dyvosvit/hello-world/master/mysetup.sh | bash -
 trap '' SIGINT
@@ -19,16 +20,16 @@ echo "BTC_$str pair is selected"
 }
 printText "Setup of "$GB_FDRNAME
 printText "Updating the system"
-apt-get -qq update
+apt-get update
 printText "Installing nodejs 7"
 curl -qsL https://deb.nodesource.com/setup_7.x | bash - 
-apt-get -y -qq install nodejs 
+apt-get -y install nodejs 
 printText "Installing tools"
-apt-get -y -qq install unzip wget mc htop gawk 
+apt-get -y install unzip wget mc htop gawk 
 npm install -g pm2 gunbot-monitor 
 printText "Installing "$GB_FDRNAME
 wget -q https://github.com/GuntharDeNiro/BTCT/releases/download/$GB_FDRNAME/$GB_FLNAME.zip -P /opt/
-unzip -o -qq /opt/$GB_FDRNAME.zip -d /opt/gb-unzip-temp
+unzip -o /opt/$GB_FDRNAME.zip -d /opt/gb-unzip-temp
 mkdir /opt/$GB_FLNAME -p
 mkdir /opt/$GB_FLNAME/cfg -p
 cp /opt/gb-unzip-temp/gunthy-* /opt/$GB_FLNAME
