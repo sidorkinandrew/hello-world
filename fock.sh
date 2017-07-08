@@ -11,7 +11,6 @@ GB_FDRNAME="Gunbot3.3.2"
 GB_FLNAME="GUNBOT_v3.3.2_Poloniex_Bittrex_Patch"
 MYPAIRS="currencies.txt"
 cd /opt/
-sudo wget https://github.com/GuntharDeNiro/BTCT/releases/download/$GB_FDRNAME/$GB_FLNAME.zip
 sudo unzip $GB_FLNAME.zip -d $GB_FLNAME
 sudo rm /opt/gunbot
 sudo ln -s /opt/$GB_FLNAME /opt/gunbot
