@@ -28,8 +28,9 @@ printText "Installing tools"
 sudo apt-get -y install unzip wget mc htop gawk 
 sudo npm install -g pm2 gunbot-monitor 
 printText "Installing "$GB_FDRNAME
-sudo wget -q https://github.com/GuntharDeNiro/BTCT/releases/download/$GB_FDRNAME/$GB_FLNAME.zip -P /opt/
-sudo unzip -o /opt/$GB_FDRNAME.zip -d /opt/gb-unzip-temp
+cd /opt/
+sudo wget https://github.com/GuntharDeNiro/BTCT/releases/download/$GB_FDRNAME/$GB_FLNAME.zip
+sudo unzip $GB_FLNAME.zip -d /opt/gb-unzip-temp
 sudo mkdir /opt/$GB_FLNAME -p
 sudo mkdir /opt/$GB_FLNAME/cfg -p
 sudo cp /opt/gb-unzip-temp/gunthy-* /opt/$GB_FLNAME
