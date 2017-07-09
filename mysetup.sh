@@ -19,8 +19,8 @@ printText "Installing nodejs 7"
 curl -qsL https://deb.nodesource.com/setup_7.x | bash - 
 sudo apt-get -y install nodejs 
 printText "Installing tools"
-sudo apt-get -y install unzip wget mc htop gawk 
-sudo npm install -g pm2 gunbot-monitor 
+sudo apt-get -y install unzip wget mc htop gawk moreutils iotop
+sudo npm install -g pm2 gunbot-monitor
 printText "Installing "$GB_FDRNAME
 cd /opt/
 sudo wget https://github.com/GuntharDeNiro/BTCT/releases/download/$GB_FDRNAME/$GB_FLNAME.zip
@@ -65,7 +65,6 @@ curl https://raw.githubusercontent.com/dyvosvit/hello-world/master/prx > /opt/gu
 sudo chmod +x /opt/gunbot/prx
 curl https://raw.githubusercontent.com/dyvosvit/hello-world/master/rpl > /opt/gunbot/rpl
 sudo chmod +x /opt/gunbot/rpl
-sudo apt-get install moreutils
 cd /opt/gunbot/cfg
 printText "Preparing *.yaml and configs for default pairs"
 # yaml + configs
