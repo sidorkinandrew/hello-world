@@ -1,0 +1,13 @@
+[Unit]
+Description=gbproxy
+
+[Service]
+# The configuration file application.properties should be here:
+WorkingDirectory=/opt/gunbot/
+ExecStart=/usr/bin/java -jar /opt/gunbot/GunbotProxyCommunity.jar
+Type=simple
+User=root
+SyslogIdentifier=gbproxy
+
+[Install]
+WantedBy=multi-user.target
