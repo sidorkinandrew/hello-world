@@ -1,0 +1,38 @@
+two="BUY_STRATEGY: 'STEPGAIN',"
+one="BUY_STRATEGY: 'BB',"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+one="GAIN: 1,"
+two="GAIN: 2,"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+one="LOW_BB: -5,"
+two="LOW_BB: -25,"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+one="BUYLVL1: 3.4,"
+two="BUYLVL1: 2,"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+one="BUYLVL2: 3.4,"
+two="BUYLVL2: 3,"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+one="BUYLVL3: 33,"
+two="BUYLVL3: 4,"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+one="SELLLVL1: 2,"
+two="SELLLVL1: 3,"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+one="SELLLVL2: 4,"
+two="SELLLVL2: 7,"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+one="SELLLVL3: 8,"
+two="SELLLVL3: 14,"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+one="SECURITY_MARGIN: 20,"
+two="SECURITY_MARGIN: 40,"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+one="BTC_TRADING_LIMIT: 0.01"
+two="BTC_TRADING_LIMIT: 0.01"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+one="PERIOD: 15,"
+two="PERIOD: 5,"
+find . -type f -name "*-config.js" -exec sed -i "s#$one#$two#g" {} \;
+mcedit poloniex-BTC_AMP-config.js
+pm2 start all
