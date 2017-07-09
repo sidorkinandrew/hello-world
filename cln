@@ -1,0 +1,6 @@
+#!/bin/bash
+for f in *-log.txt
+do
+    echo "Processing $f"
+    tail -n 5000 "$f" | sponge "$f"
+done
