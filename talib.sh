@@ -33,4 +33,5 @@ sudo ./configure
 sudo make
 sudo make install
 sudo pip install cython
+sudo apt-get install python-dev -y
 sudo pip install TA-lib
