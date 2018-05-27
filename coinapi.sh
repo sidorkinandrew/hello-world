@@ -1,7 +1,7 @@
 #!/bin/bash
 # apt-get install curl -y
 # run with 
-# curl -sL https://raw.githubusercontent.com/dyvosvit/hello-world/master/talib.sh | bash -
+# curl -sL https://raw.githubusercontent.com/dyvosvit/hello-world/master/coinapi.sh | bash -
 printText () {
   echo "&&============================================================&&"
   echo "                   $1"
