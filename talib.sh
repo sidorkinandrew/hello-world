@@ -23,6 +23,12 @@ sudo npm install -g pm2
 printText "Changing default SSH port to 57777"
 sudo curl https://raw.githubusercontent.com/dyvosvit/hello-world/master/sshd_config /etc/ssh/sshd_config
 sudo service sshd restart
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo cp /etc/fstab /etc/fstab.bak
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 mkdir /opt/talib
 cd /opt/talib
 sudo wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
@@ -35,11 +41,5 @@ sudo make install
 sudo pip install cython
 sudo apt-get install python-dev -y
 sudo pip install TA-lib
-sudo fallocate -l 2G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-sudo cp /etc/fstab /etc/fstab.bak
-echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 sudo curl https://rclone.org/install.sh | sudo bash
 sudo mkdir /root/coinapi
