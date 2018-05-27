@@ -9,7 +9,7 @@ printText () {
 }
 printText "Updating the system"
 sudo apt-get update -y && sudo apt-get upgrade -y
-printText "Installing nodejs 10"
+printText "Installing nodejs 10 && python modules"
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install -y python-pip
@@ -23,12 +23,14 @@ sudo npm install -g pm2
 printText "Changing default SSH port to 57777"
 sudo curl https://raw.githubusercontent.com/dyvosvit/hello-world/master/sshd_config /etc/ssh/sshd_config
 sudo service sshd restart
+printText "Adding swap"
 sudo fallocate -l 2G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo cp /etc/fstab /etc/fstab.bak
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+printText "Installing TA-lib"
 mkdir /opt/talib
 cd /opt/talib
 sudo wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
