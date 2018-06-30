@@ -47,4 +47,4 @@ sudo curl https://rclone.org/install.sh | sudo bash
 sudo mkdir /root/coinapi
 sudo apt-get install python3-pip python3-dev
 python3 -m pip install --upgrade setuptools wheel
-python3 -m pip install --upgrade pip numpy pandas requests python-telegram-bot xlrd openpyxl pygsheets oauthclient ccxt TA-lib certifi oauth2client
+python3 -m pip install --upgrade pip numpy pandas requests python-telegram-bot xlrd openpyxl pygsheets oauthclient ccxt TA-lib certifi oauth2client xlsxwriter
