@@ -17,7 +17,7 @@ sudo apt-get install -y build-essential
 python -m pip install --upgrade pip setuptools wheel
 pip install pandas bittrex xlwt xlsxwriter
 printText "Installing tools"
-sudo apt-get -y install unzip wget mc htop gawk moreutils iotop
+sudo apt-get -y install unzip wget mc htop gawk moreutils iotop httping
 sudo npm install -g pm2
 #change ssh port
 printText "Changing default SSH port to 57777"
