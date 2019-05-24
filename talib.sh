@@ -17,7 +17,7 @@ sudo apt-get install -y build-essential
 python -m pip install --upgrade pip setuptools wheel
 pip install pandas bittrex xlwt xlsxwriter
 printText "Installing tools"
-sudo apt-get -y install unzip wget mc htop gawk moreutils iotop httping
+sudo apt-get -y install unzip wget mc htop gawk moreutils iotop httping p7zip-full
 sudo npm install -g pm2
 #change ssh port
 printText "Changing default SSH port to 57777"
@@ -53,7 +53,7 @@ python3 -m pip install --upgrade TA-lib
 sudo apt-get install software-properties-common python-software-properties
 sudo add-apt-repository ppa:jonathonf/python-3.7
 sudo apt-get update -y
-sudo apt-get install python3.7-pip python3.7-dev -y
-python3.6 -m pip install --upgrade setuptools wheel
-python3.6 -m pip install --upgrade pip numpy pandas requests python-telegram-bot xlrd openpyxl pygsheets oauthclient ccxt certifi oauth2client xlsxwriter asyncio
-python3.6 -m pip install --upgrade TA-lib
+sudo apt-get install python3.7-dev -y
+python3.7 -m pip install --upgrade setuptools wheel
+python3.7 -m pip install --upgrade pip numpy pandas requests python-telegram-bot xlrd openpyxl pygsheets oauthclient ccxt certifi oauth2client xlsxwriter asyncio
+python3.7 -m pip install --upgrade TA-lib
