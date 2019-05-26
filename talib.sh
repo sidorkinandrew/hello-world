@@ -47,7 +47,7 @@ sudo curl https://rclone.org/install.sh | sudo bash
 sudo mkdir /root/coinapi
 sudo apt-get install python3-pip python3-dev -y
 python3 -m pip install --upgrade setuptools wheel
-python3 -m pip install --upgrade pip numpy pandas requests python-telegram-bot xlrd openpyxl pygsheets oauthclient ccxt certifi oauth2client xlsxwriter flask
+python3 -m pip install --upgrade pip numpy pandas requests python-telegram-bot xlrd openpyxl pygsheets oauthclient ccxt certifi oauth2client xlsxwriter flask flask-sqlalchemy flask-login
 python3 -m pip install --upgrade TA-lib
 
 sudo apt-get install software-properties-common python-software-properties
@@ -55,5 +55,5 @@ sudo add-apt-repository ppa:jonathonf/python-3.7
 sudo apt-get update -y
 sudo apt-get install python3.7-dev -y
 python3.7 -m pip install --upgrade setuptools wheel
-python3.7 -m pip install --upgrade pip numpy pandas requests python-telegram-bot xlrd openpyxl pygsheets oauthclient ccxt certifi oauth2client xlsxwriter asyncio flask
+python3.7 -m pip install --upgrade pip numpy pandas requests python-telegram-bot xlrd openpyxl pygsheets oauthclient ccxt certifi oauth2client xlsxwriter asyncio flask flask-sqlalchemy flask-login
 python3.7 -m pip install --upgrade TA-lib
