@@ -44,4 +44,4 @@ python3.7 -m pip install --upgrade pip3 setuptools wheels
 python3.7 -m pip install django --user
 sudo apt install python-django-common python3-django
 
-
+sudo apt-get -y install postgresql postgresql-contrib python3-dev python3-psycopg2 libpq-dev python3.7-dev
