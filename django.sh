@@ -42,6 +42,9 @@ sudo apt-get install -y python-django-common python3-django
 
 sudo apt-get -y install postgresql postgresql-contrib python3-dev python3-psycopg2 libpq-dev python3.7-dev
 
+python3.7 -m pip install psycopg2-binary
+python3.7 -m pip install psycopg2
+
 python3.7 -m django --version
 
 printText "Django the system"
