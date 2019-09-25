@@ -23,6 +23,7 @@ sudo swapon /swapfile
 sudo cp /etc/fstab /etc/fstab.bak
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
+printText "Python the system"
 sudo apt-get install python-dev -y
 sudo curl https://rclone.org/install.sh | sudo bash
 sudo apt-get install software-properties-common python-software-properties
@@ -35,13 +36,25 @@ python3.7 -m pip install --upgrade pip numpy pandas requests python-telegram-bot
 sudo apt update -y
 sudo apt install software-properties-common -y
 sudo apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
-sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update -y
-sudo apt install -y python3.7
-sudo apt install -y python3-pip
+sudo apt install -y python3.7 python3-pip
 python3.7 -m pip --version
-python3.7 -m pip install --upgrade pip3 setuptools wheels
-python3.7 -m pip install django --user
-sudo apt install python-django-common python3-django
+python3.7 -m pip install --upgrade pip setuptools wheel
+python3.7 -m pip install django
+sudo apt-get install -y python-django-common python3-django
 
 sudo apt-get -y install postgresql postgresql-contrib python3-dev python3-psycopg2 libpq-dev python3.7-dev
+
+python3.7 -m django --version
+
+printText "Django the system"
+django-admin startproject firstproject
+
+python3.7 manage.py makemigrations
+python3.7 manage.py migrate
+python3.7 manage.py runserver 0:8888
+
+python3.7 manage.py startapp polls
+
+python3.7 manage.py createsuperuser
+
