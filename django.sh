@@ -14,6 +14,7 @@ sudo apt-get install -y npm
 sudo apt-get install -y build-essential
 sudo apt-get -y install curl unzip wget mc htop gawk moreutils iotop httping p7zip-full
 sudo npm install -g pm2
+sudo apt-get install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
 
 printText "Adding swap"
 sudo fallocate -l 2G /swapfile
@@ -26,18 +27,14 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 printText "Python the system"
 sudo apt-get install python-dev -y
 sudo curl https://rclone.org/install.sh | sudo bash
-sudo apt-get install software-properties-common python-software-properties
-sudo add-apt-repository ppa:jonathonf/python-3.7
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:jonathonf/python-3.7
 sudo apt-get update -y
 sudo apt-get install python3.7-dev -y
+sudo apt install -y python3.7 python3-pip
 python3.7 -m pip install --upgrade setuptools wheel
 python3.7 -m pip install --upgrade pip numpy pandas requests python-telegram-bot xlrd openpyxl pygsheets oauthclient ccxt certifi oauth2client xlsxwriter asyncio
 
-sudo apt update -y
-sudo apt install software-properties-common -y
-sudo apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
-sudo apt update -y
-sudo apt install -y python3.7 python3-pip
 python3.7 -m pip --version
 python3.7 -m pip install --upgrade pip setuptools wheel
 python3.7 -m pip install django
@@ -49,7 +46,7 @@ python3.7 -m django --version
 
 printText "Django the system"
 django-admin startproject firstproject
-
+ 
 python3.7 manage.py makemigrations
 python3.7 manage.py migrate
 python3.7 manage.py runserver 0:8888
