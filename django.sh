@@ -1,3 +1,5 @@
+# curl -sL https://raw.githubusercontent.com/dyvosvit/hello-world/master/django.sh | bash -
+
 printText () {
   echo "&&============================================================&&"
   echo "                   $1"
