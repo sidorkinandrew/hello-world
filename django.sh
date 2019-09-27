@@ -50,11 +50,11 @@ python3.7 -m django --version
 printText "Django the system"
 django-admin startproject firstproject
  
+cd firstproject
 python3.7 manage.py makemigrations
 python3.7 manage.py migrate
-python3.7 manage.py runserver 0:8888
-
-python3.7 manage.py startapp polls
-
 python3.7 manage.py createsuperuser
 
+#python3.7 manage.py runserver 0:8888
+
+#python3.7 manage.py startapp polls
