@@ -30,34 +30,31 @@ printText "Python the system"
 sudo apt-get install python-dev -y
 sudo curl https://rclone.org/install.sh | sudo bash
 sudo apt-get install -y software-properties-common
-sudo add-apt-repository -y ppa:jonathonf/python-3.7
+sudo add-apt-repository -y ppa:jonathonf/python-3.8
 sudo apt-get update -y
-sudo apt-get install python3.7-dev -y
-sudo apt install -y python3.7 python3-pip
-python3.7 -m pip install --upgrade setuptools wheel
-python3.7 -m pip install --upgrade pip numpy pandas requests python-telegram-bot xlrd openpyxl pygsheets oauthclient ccxt certifi oauth2client xlsxwriter asyncio
+sudo apt-get install python3.8-dev -y
+sudo apt install -y python3.8 python3-pip
+python3.8 -m pip install --upgrade testresources setuptools wheel
+python3.8 -m pip install --upgrade pip numpy pandas requests python-telegram-bot xlrd openpyxl pygsheets oauthclient ccxt certifi oauth2client xlsxwriter asyncio
 
-python3.7 -m pip --version
-python3.7 -m pip install --upgrade pip setuptools wheel
-python3.7 -m pip install django
+python3.8 -m pip --version
+python3.8 -m pip install django
 sudo apt-get install -y python-django-common python3-django
 
-sudo apt-get -y install postgresql postgresql-contrib python3-dev python3-psycopg2 libpq-dev python3.7-dev
+sudo apt-get -y install postgresql postgresql-contrib python3-dev python3-psycopg2 libpq-dev python3.8-dev
 
-python3.7 -m pip install psycopg2-binary
-python3.7 -m pip install psycopg2
+python3.8 -m pip install psycopg2-binary
+python3.8 -m pip install psycopg2
 
-python3.7 -m django --version
+python3.8 -m django --version
 
 printText "Django the system"
 django-admin startproject firstproject
  
 cd firstproject
 
-#python3.7 manage.py makemigrations
-#python3.7 manage.py migrate
-#python3.7 manage.py createsuperuser
-
-#python3.7 manage.py runserver 0:8888
-
-#python3.7 manage.py startapp polls
+#python3.8 manage.py makemigrations
+#python3.8 manage.py migrate
+#python3.8 manage.py createsuperuser
+#python3.8 manage.py runserver 0:8888
+#python3.8 manage.py startapp polls
